@@ -7,7 +7,7 @@ import 'pages/product_list_page.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (_) => CartModel(),
+      create: (context) => CartModel(),
       child: const MyApp(),
     ),
   );
@@ -19,10 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'TechStore',
-      debugShowCheckedModeBanner: false,
+      title: 'Shopping Cart',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
       home: const ProductListPage(),
